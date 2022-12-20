@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+
+    <title>JS Day 1 Question</title>
+    <style>
+        pre {
+            background-color: white;
+            padding: 15px;
+            border: 3px solid grey;
+            border-radius: 10px;
+        }
+
+        pre:hover {
+            background-color: rgb(200, 200, 181);
+            box-shadow: 5px 5px 2px green;
+            transform: scale(0.85);
+        }
+
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: yellow;
+        }
+
+        h1 {
+            text-align: center;
+            color: aqua;
+            font-weight: bold;
+            font-size: 5em;
+            margin: 15px;
+        }
+
+       
+
+      
+    </style>
+</head>
+
+<body>
+    <h1 class="page-header">JS Handson 13 (Assignment)</h1>
+    <hr>
+    <div class="container-fluid">
+ <p><b>
+    Socks Draws
+ </b>
+PrepBuddy is getting late for college. She is looking for a matching pair of socks from a drawer full of socks. In the worst-case scenario, how many socks should PrepBuddy remove from her drawer until she finds a matching pair.</p>
+
+<pre>
+    const sockDraws = (n) => {
+   return n+1
+};
+
+
+</pre>
+<hr>
+<p><b>Square Fit</b>
+PrepBuddy provided you with a rectangular board of 
+m
+x
+n
+ dimension. Also, he provided an unlimited number of small blocks of 
+2
+x
+1
+ size. You are allowed to rotate the block. You are asked to place as many blocks as possible on the board to meet the following conditions:
+1. Each block completely covers two squares.
+2. No two blocks overlap.
+3. Each block lies entirely inside the board. It is allowed to touch the edges of the board.
+Find the maximum number of blocks, which can be placed under these restrictions.</p>
+<pre>
+    const squareFit = (m,n) => {
+    if((m%2 === 0)||(n%2 === 0)){
+      var a = (m*n)/2;
+    }  
+    else{
+      a= ((m*n)-1)/2
+    }
+    return a
+};
+
+</pre>
+<hr>
+
+<p><b>Age calculation</b>
+You are given two integers 
+F
+ and 
+S
+, indicating the age of the father and his son. You have to calculate how many years ago the father was twice as old as his son, or in how many years he will be twice as old.</p>
+<pre>
+    const ageCalculation = (f,s) => {
+    //if(2 * s - f > 0){
+    //  return 2 * s - f
+    //}
+    //else {
+      //return f - 2 * s
+    //}
+    
+    let x = f - 2*s
+    return (Math.abs(x))
+};
+
+</pre>
+<hr>
+
+
+<p><b>Atom Combine</b>
+    Atoms combine to form molecules. The base amount of atom 
+=
+1
+ at 
+s
+e
+c
+=
+1
+ that is combined into the molecule, and for every second that passes, their base amount doubles. So at sec
+=
+2
+, there are 
+2
+ atoms and now a total of 
+3
+ (previous 
+1
+ + 
+2
+(new)) atoms are present in the molecule. At sec
+=
+3
+, there are 
+4
+ atoms, and now the total is 
+7
+ (previous 
+3
++
+4
+(new)) atoms present in the molecule. Return how many atoms are present in the molecule at a certain second.
+</p>
+<pre>
+    const atomCombine = (s) => {
+  return Math.pow(2,s)-1
+};
+
+</pre>
+<hr>
+
+<p><b>Discount Value</b>
+Given two values 
+p
+r
+i
+c
+e
+ and 
+d
+i
+s
+c
+o
+u
+n
+t
+ percentage as integers, return the price after the discount.</p>
+ <pre>
+    const discountValue = (p,d) => {
+    let c= p * (d / 100)
+   c=  c.toFixed(2)
+    return (p - c)
+};
+ </pre>
+ <hr>
+ <p><b>Range Victory</b>
+Arnab is fighting some enemies. The enemies' power level is a distinct natural number in a range of 
+l
+ to 
+r
+ (both inclusive).
+Arnab can defeat the enemies if he can find the largest number which divides every number in the given range. Help Arnab find the answer.*
+
+Note:You have to complete LargestNumber function. No need to take any input.</p>
+<pre>
+    const LargestNumber = (l,r) => 
+{
+    
+    
+    
+};
+</pre>
+<hr>
+<p><b>Divisibility Test</b>
+O
+M
+G
+!
+ You made up this question, Congrats on that
+!
+ Let us solve a fun maths question now. Just do the simple calculation behind it and you are done. You are given a number 
+n
+ and you are asked to make 
+n
+ divisible by 
+10
+. The only operation you can do on 
+n
+ is to multiply 
+n
+ by 
+2
+.
+Given 
+n
+ find out how many operations are required to make 
+n
+ divisible by 
+10
+.
+
+Note: You have to complete DivTest function. No need to take any input.</p>
+<pre>
+    const DivTest = (n) => 
+{
+  if(n%10===0){
+    console.log("0")
+  }
+    else if((n*2)%10===0){
+      console.log("1")
+    }
+    else{
+      console.log("-1")
+    }
+    
+};
+
+</pre>
+<hr>
+
+<p><b>Building Up Ten</b>
+Rohit is one of the brillant student of the school and participated in coding competition on the behalf of his school.Although he was able to solve all the questions but got stuck in one of the question in which he was provided with two integers 
+A
+ and 
+B
+ and have to return true if one of them is 
+10
+ or their sum is 
+10
+.Rohit wants your help in solving out this question for securing a good rank in competition.   
+
+Note: You have to complete BuildTen function. No need to take any input.</p>
+<pre>
+    
+const BuildTen = (A,B) => {
+  
+    if(A === 10 || B ===10 || (A+B) ===10){
+      return "true"
+    }
+    else {
+      return "false"
+    }
+};
+
+
+</pre>
+<hr>
+
+<p><b>Play with Boolean</b>
+Recently Gourav learned boolean values and showed off in front of his friends. So one of his friends gave him a task in which he has to return the opposite of the given boolean as a number. Rohit wants your help with solution so that he will not feel insulted in front of his friends.   
+
+Note: You have to complete ChangeBool function. No need to take any input.</p>
+<pre>
+    const ChangeBool = (A) => 
+{
+    if(A==true){
+      return "0"
+    }
+    else if(A==1){
+      return "0"
+    }
+    
+    else{
+      return "1"
+    }
+};
+
+</pre>
+<hr>
+<p><b>Checking Range</b>
+Abhishek recently learned about the concepts of ranges and to test his ability he tried to solve the unique problem in which he has a number 
+A
+ and he wants to check whether 
+A
+ is within the bounds of 
+B
+ and 
+C
+. It's also mentioned that if 
+N
+ isn't an integer return false. so being a friend of Abhishek he wants your help.
+
+Note: You have to complete CheckRange function. No need to take any input.</p>
+<pre>
+    const CheckRange = (A,B,C) => 
+{
+  if(A > B && A < C){
+    return "true"
+  }
+    else{
+      return "false"
+    }
+};
+
+
+</pre>
+<hr>
+<p><b>Pattern Puzzle</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows with symbol 
+X
+.  
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+ pat = ""
+  for (let row=1; row<= N; row++){
+    pat=""
+    for (let col=1; col<=row; col++){
+      pat = pat + "X"
+    }
+      console.log(pat)
+  }
+
+    
+};
+</pre>
+<hr>
+
+<p><b>Pattern Puzzle 1</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+   
+    for(row=1; row<=N; row++)
+    {
+       pat=""
+      for(col=1; col<=row; col++){
+        pat = pat + col + " "
+      }
+      console.log(pat)
+    }
+   
+};
+</pre>
+<hr>
+<p><b>Pattern Puzzle 3</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+  
+  for(row=1; row < = N; row++){
+    pat=""
+    for(col=1; col < = row; col++){
+      pat = pat + row  + " "
+    }
+    console.log(pat)
+  }
+    
+};
+
+</pre>
+<hr>
+<p><b>Pattern Puzzle 4</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    
+const CompletePattern = (N) => 
+{
+  
+for (let i = 1; i <= N; i++) {
+  let string = "";
+  for (let j = 1; j <= N - i; j++) {
+    string += "#";
+  }
+ 
+  for (let k = 1; k <= i; k++) {
+    string += k + " ";
+  }
+  console.log(string);
+}
+
+    
+};
+</pre>
+<hr>
+
+<p><b>Pattern Puzzle 5</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+  
+  for(row=1; row<=N; row++){
+    pat=""
+    for(col=1; col<=row; col++){
+      if((row+col)%2 === 0){
+        pat=pat+"1 "
+      }
+      else{
+        pat=pat+"0 "
+      }
+    }
+    console.log(pat)
+  }
+ 
+    
+};
+</pre>
+<hr>
+<p><b>  Pattern Puzzle 6</b>
+Given char 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+  var ch = N.charCodeAt(0)-64
+    for(let r=1; r<=ch; r++){
+    s=""
+    var num=65;
+    for(c=1; c<=r; c++){
+      s = s + String.fromCharCode(num) + " "
+      num++
+    }
+    console.log(s)
+    }
+};
+
+
+</pre>
+<hr>
+<p><b>Pattern Puzzle 7</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows with the symbol 
+X
+.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+  
+  for(row=1; row<=N; row++){
+    pat=""
+    for(col=1; col<=N-row; col++){
+      pat=pat+"#"
+    }
+    for(nww=1; nww<=row; nww++){
+      pat=pat+"X"
+    }
+   console.log(pat)
+  }
+  
+    
+};
+
+</pre>
+<hr>
+<p><b>Shaped Puzzle</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+   k=1;
+      
+  for(row=1; row<=N; row++){
+   
+    pat=""
+    for(col=1; col<=row; col++){
+      if(k%2 === 0){
+        pat=pat+"0 "
+      }
+      else{
+        pat=pat+"1 "
+      }
+      k++
+    }
+    console.log(pat)
+  }
+  
+    
+};
+
+</pre>
+<hr>
+<p><b>Shaped Puzzle 1</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+    for(r=N; r>=1; r--){
+      s="";
+      for(c=1;c<=r; c++){
+        s = s + c + " ";
+      }
+      console.log(s);
+    }
+   
+    
+};
+</pre>
+<hr>
+
+<p><b>Pattern Puzzle 2</b>
+Given 
+N
+, you have to print the spanning 
+N
+ rows in the following pattern provided in the inputs.
+
+Note: You have to complete CompletePattern function. No need to take any input.</p>
+<pre>
+    const CompletePattern = (N) => 
+{
+ for(r=1;r<=N;r++){
+   pat=""
+   for(c=1;c<=N-r; c++){
+     pat =pat +"?"
+   }
+   for(k=1;k<=2*r-1;k++){
+     pat= pat + "X"
+   }
+   for(j=1;j<=N-r;j++){
+     pat=pat+"?"
+   }
+   console.log(pat)
+ }
+};
+
+
+</pre>
+<hr>
+
+<p><b>Armstrong Number.</b>
+You are provided with number 
+N
+ and you have to check whether the number is Armstrong or not. 
+
+Note: You have to complete CheckArm function. No need to take any input.</p>
+<pre>
+    
+const CheckArm = (N) => 
+{
+  temp = N
+  sum=0
+    while(N!==0){
+      let d=N%10;
+      let cube = d*d*d;
+      sum=sum+cube
+      N = parseInt(N/10)
+      
+    }
+    if (sum===temp){
+      return "Yes"
+    }
+    else{
+      return "No"
+    }
+};
+
+</pre>
+<hr>
+
+<p><b>Unique Array</b>
+You are provided with an array 
+A
+ consisting of 
+N
+ elements.Your task is to print the unique elements in a separate line. 
+
+Note: You have to complete UniqueElements function. No need to take any input.</p>
+<pre>
+    
+const UniqueElements = (N,arr) => 
+{
+  let s=""
+  for(let i=0; i < arr.length;i++){
+    
+    if(arr[i] !== 0){
+       s= s +arr[i]+" "
+      }
+    for(let j=i+1; j < arr.length; j++){
+      if(arr[i]= == rr[j]){
+        arr[j]=0;
+      }
+      
+    }
+  }
+   console.log(s)
+};
+
+
+</pre>
+<hr>
+
+<p><b>Find Duplicates</b>
+You are provided with an array 
+A
+ consisting of 
+N
+ elements.Your task is to print the duplicates elements in a separate line. 
+
+Note: You have to complete DuplicateElements function. No need to take any input.</p>
+<pre>
+    const DuplicateElements = (N,arr) => 
+{
+  s=""
+  for(r=0;r < N;r++){
+    for(c=r+1;c < N;c++){
+      if(arr[r]===arr[c]){
+        s=s+arr[c]+"\n"
+        
+      }
+      
+    }
+    
+    
+  }
+  console.log(s)
+  
+    
+};
+
+
+</pre>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
